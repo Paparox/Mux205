@@ -12,5 +12,5 @@ Gestionnaire de scores : Le jeu enregistrera les performances des joueurs en fon
 Écran de fin de partie : Lorsque l'oiseau touche un obstacle ou sort de l'écran, un écran de fin de partie s'affichera, indiquant le score final du joueur et lui permettant de recommencer la partie en appuyant sur le bouton "restart".
 
 Pour les animations, j'ai utilisé des packages. Il faut aussi installer DOTween. C'est un framework d'animation pour Unity.
-GAYRARD Romain
+
 
