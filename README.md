@@ -1,43 +1,42 @@
-# Site Proterma (plomberie · chauffage)
+# Site Protherma – Joël Laugier, chauffagiste
 
-Site vitrine d'une seule page, sans serveur ni base de données : un fichier `index.html` + un dossier `photos/`.
+Site vitrine d'une seule page aux couleurs de la carte de visite et du flyer Protherma.
+Il n'y a ni serveur ni base de données : `index.html`, le logo dans `assets/` et les photos dans `photos/`.
 
-## 1. Mettre les vraies infos
+## Ajouter les photos (sans toucher au code)
 
-Ouvrir `index.html`, chercher `const CONFIG` (vers le bas du fichier) et remplacer :
+Déposer les fichiers dans le dossier `photos/` **avec exactement ces noms** :
 
-| Champ | Exemple |
+| Fichier | Emplacement sur le site |
 |---|---|
-| `telephone` | `06 12 34 56 78` |
-| `telephoneIntl` | `+33612345678` |
-| `whatsapp` | `33612345678` (sans + ni espaces) |
-| `email`, `ville`, `zone`, `zoneCourte`, `horaires` | |
-| `facebook` | lien de la page Facebook |
-| `messenger` | `https://m.me/nom-de-la-page` |
-| `siret` | numéro SIRET |
-| `artisan` | `Joël Logier` |
-| `demo` | `false` pour retirer le bandeau « Maquette » |
+| `joel.jpg` | Photo de Joël devant son camion (encadré orange « Votre artisan ») |
+| `chantier-01.jpg` | Remplacement chaudière fioul par PAC haute température R290 |
+| `chantier-02.jpg` | Chaufferie : ballon d'eau chaude et module hydraulique |
+| `chantier-03.jpg` | Climatisation murale dans un séjour |
+| `chantier-04.jpg` | Console de climatisation sous fenêtre de toit |
+| `chantier-05.jpg` | Unité extérieure de climatisation |
+| `chantier-06.jpg` | Remplacement de chaudière |
 
-## 2. Ajouter les photos de chantier
+Sur GitHub : ouvrir le dossier `photos`, puis **Add file → Upload files** et glisser les photos.
+Tant qu'un fichier manque, la case affiche « Photo à venir ».
 
-1. Récupérer les photos depuis la page Facebook (ou directement sur le téléphone de l'artisan, meilleure qualité).
-2. Les réduire à environ 1600 px de large (format JPG, ~300 Ko) et les déposer dans `photos/`.
-3. Dans `index.html`, compléter la liste `const PHOTOS` :
+Pour ajouter d'autres chantiers ou changer les titres, modifier la liste `const PHOTOS` dans `index.html`.
+Les catégories possibles sont `chaudiere`, `pac`, `clim` et `entretien`.
+Format conseillé : JPG d'environ 1600 px de large et de moins de 500 Ko.
 
-```js
-{ src: "photos/sdb-dupont.jpg", titre: "Salle de bain complète", lieu: "Douche à l'italienne", cat: "sdb" },
-```
+## Modifier les infos
 
-Catégories possibles : `sdb`, `chauffage`, `eau-chaude`, `depannage`.
+Dans `index.html`, le bloc `const CONFIG` contient le téléphone, l'e-mail, l'adresse, les liens Facebook et Messenger et le SIRET.
+Une fois le site validé, passer `demo` à `false` pour retirer le bandeau « Maquette ».
 
-## 3. Mettre en ligne (gratuit)
+## Mettre en ligne avec GitHub Pages
 
-- **Netlify Drop** (le plus simple) : aller sur https://app.netlify.com/drop et glisser le dossier du site. Le site est en ligne en 30 secondes avec une adresse en `.netlify.app`.
-- **GitHub Pages** : dans le dépôt GitHub, *Settings → Pages → Build and deployment*, Source « Deploy from a branch », choisir la branche du site et le dossier `/ (root)`, puis *Save*. Le site apparaît en 1 à 2 minutes à l'adresse indiquée en haut de cette page.
-- **Nom de domaine** (`proterma.fr` par ex., environ 10 €/an chez OVH, Gandi, etc.) à relier ensuite à Netlify.
+Dans le dépôt, aller dans **Settings → Pages → Build and deployment**. Choisir la source « Deploy from a branch », la branche du site et le dossier `/ (root)`, puis cliquer sur **Save**.
+Le site apparaît en 1 à 2 minutes.
 
-## À valider avec l'artisan
+## À valider avec Joël
 
-- Les textes des services (ne garder que ce qu'il fait vraiment).
-- Mentions légales obligatoires pour un professionnel (raison sociale, SIRET, adresse, assurance décennale si travaux concernés).
-- Vérifier sur https://data.inpi.fr que le nom « Proterma » ne pose pas de souci : il est très proche de « Protherm », marque de chaudières du groupe Vaillant, et une société « PROTERMA » (SIREN 451 712 491, Indre) a existé puis a été radiée en 2019.
+- Le SIRET et les mentions légales, obligatoires pour un professionnel.
+- La zone d'intervention précise.
+- Le lien Messenger (`https://m.me/100085293757633`) : à tester depuis un téléphone.
+- Le nom : « Protherma » est très proche de « Protherm », une marque de chaudières du groupe Vaillant. Il vaut mieux vérifier sur https://data.inpi.fr.
