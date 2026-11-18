@@ -1,4 +1,4 @@
-# Site Pro Therma (plomberie · chauffage)
+# Site Proterma (plomberie · chauffage)
 
 Site vitrine d'une seule page, sans serveur ni base de données : un fichier `index.html` + un dossier `photos/`.
 
@@ -15,6 +15,7 @@ Ouvrir `index.html`, chercher `const CONFIG` (vers le bas du fichier) et remplac
 | `facebook` | lien de la page Facebook |
 | `messenger` | `https://m.me/nom-de-la-page` |
 | `siret` | numéro SIRET |
+| `artisan` | `Joël Logier` |
 | `demo` | `false` pour retirer le bandeau « Maquette » |
 
 ## 2. Ajouter les photos de chantier
@@ -33,10 +34,10 @@ Catégories possibles : `sdb`, `chauffage`, `eau-chaude`, `depannage`.
 
 - **Netlify Drop** (le plus simple) : aller sur https://app.netlify.com/drop et glisser le dossier `pro-therma`. Le site est en ligne en 30 secondes avec une adresse en `.netlify.app`.
 - **GitHub Pages** : possible aussi, idéalement depuis un dépôt dédié au site.
-- **Nom de domaine** (`pro-therma.fr` par ex., environ 10 €/an chez OVH, Gandi, etc.) à relier ensuite à Netlify.
+- **Nom de domaine** (`proterma.fr` par ex., environ 10 €/an chez OVH, Gandi, etc.) à relier ensuite à Netlify.
 
 ## À valider avec l'artisan
 
 - Les textes des services (ne garder que ce qu'il fait vraiment).
 - Mentions légales obligatoires pour un professionnel (raison sociale, SIRET, adresse, assurance décennale si travaux concernés).
-- Vérifier sur https://data.inpi.fr que le nom « Pro Therma » ne pose pas de souci : « Protherm » est une marque de chaudières du groupe Vaillant.
+- Vérifier sur https://data.inpi.fr que le nom « Proterma » ne pose pas de souci : il est très proche de « Protherm », marque de chaudières du groupe Vaillant, et une société « PROTERMA » (SIREN 451 712 491, Indre) a existé puis a été radiée en 2019.

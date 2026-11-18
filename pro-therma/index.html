@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pro Therma</title>
+<title>Proterma</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Pro Therma, plombier chauffagiste : dépannage, chauffage, eau chaude et salle de bain. Devis détaillé avant chaque chantier.">
+<meta name="description" content="Proterma, plombier chauffagiste : dépannage, chauffage, eau chaude et salle de bain. Devis détaillé avant chaque chantier.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
@@ -290,13 +290,13 @@ footer a { opacity: .85; }
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#accueil" aria-label="Pro Therma, accueil">
+    <a class="logo" href="#accueil" aria-label="Proterma, accueil">
       <svg viewBox="0 0 40 40" aria-hidden="true">
         <path d="M20 3 C20 3 7 17 7 25 a13 13 0 0 0 26 0 C33 17 20 3 20 3 Z" fill="var(--water)"/>
         <path d="M20 3 C20 3 33 17 33 25 a13 13 0 0 1 -13 13 Z" fill="var(--copper)"/>
         <path d="M14 26 a6 6 0 0 0 6 6" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
       </svg>
-      <span class="logo-word">Pro <span>Therma</span></span>
+      <span class="logo-word">Pro<span>terma</span></span>
     </a>
     <nav class="main" aria-label="Navigation principale">
       <a href="#services">Services</a>
@@ -373,7 +373,7 @@ footer a { opacity: .85; }
     <div class="wrap">
       <div class="band-item"><strong>Devis détaillé</strong><span>Prix annoncé avant les travaux</span></div>
       <div class="band-item"><strong>Chantier propre</strong><span>Protection et nettoyage inclus</span></div>
-      <div class="band-item"><strong>Un interlocuteur</strong><span>Le même artisan du début à la fin</span></div>
+      <div class="band-item"><strong>Un interlocuteur</strong><span><span data-cfg="artisan"></span>, du début à la fin</span></div>
       <div class="band-item"><strong data-cfg="zoneCourte"></strong><span>Particuliers et professionnels</span></div>
     </div>
   </section>
@@ -463,6 +463,7 @@ footer a { opacity: .85; }
           <p>Décrivez votre besoin, on vous rappelle pour en discuter et fixer un rendez-vous.</p>
         </div>
         <dl class="info-list">
+          <div class="info-row"><dt>Artisan</dt><dd data-cfg="artisan"></dd></div>
           <div class="info-row"><dt>Téléphone</dt><dd><span data-cfg="telephone" id="tel-text"></span><button class="copy-btn" type="button" data-copy="telephone">Copier</button></dd></div>
           <div class="info-row"><dt>E-mail</dt><dd><span data-cfg="email"></span></dd></div>
           <div class="info-row"><dt>Zone</dt><dd><span data-cfg="ville"></span> <span data-cfg="zone"></span></dd></div>
@@ -505,14 +506,14 @@ footer a { opacity: .85; }
 
 <footer>
   <div class="wrap">
-    <span>© <span id="year"></span> Pro Therma · Plomberie &amp; chauffage · SIRET <span data-cfg="siret"></span></span>
+    <span>© <span id="year"></span> Proterma · Plomberie &amp; chauffage · SIRET <span data-cfg="siret"></span></span>
     <span><a data-href="facebook" href="#" target="_blank" rel="noopener">Facebook</a> · <a href="#contact">Contact</a> · Mentions légales</span>
   </div>
 </footer>
 
 <div class="chat-fab" id="chat">
   <div class="chat-panel" id="chat-panel" hidden>
-    <header><strong>Pro Therma</strong><span>Réponse en général dans la journée</span></header>
+    <header><strong>Proterma</strong><span>Réponse en général dans la journée</span></header>
     <div class="chat-body">
       <p class="bubble">Bonjour ! Une fuite, un devis, une question ? Écrivez-nous directement.</p>
       <a class="chat-link" id="chat-wa" href="#" target="_blank" rel="noopener">
@@ -548,6 +549,7 @@ footer a { opacity: .85; }
    ===================================================================== */
 const CONFIG = {
   demo: true,                            // mettre false pour masquer le bandeau "Maquette"
+  artisan: "Joël Logier",               // nom affiché (orthographe à confirmer)
   telephone: "06 00 00 00 00",           // numéro affiché
   telephoneIntl: "+33600000000",         // même numéro au format international (lien d'appel)
   whatsapp: "33600000000",               // numéro WhatsApp sans + ni espaces
